@@ -1,0 +1,37 @@
+
+#box-1{
+	background-color: white;
+	color: mediumaquamarine;
+	height: 20px;
+	width: 120px;
+	border: 1px solid mediumaquamarine;
+	border-radius: 15px;
+	text-align: center;
+	padding: 3px;
+	margin: 10px;
+}
+#box-2{
+	background-color: mediumaquamarine;
+	color: white;
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	text-align: center;
+	padding: 3px;
+	margin: 10px;
+	
+}
+#box-3{
+	background-color: dodgerblue;
+	color: white;
+	height: 20px;
+	width: 140px;
+	border: 1px solid black;
+	text-align: center;
+	padding: 6px;
+	margin: 10px;
+	box-shadow: 5px 5px 5px black;
+}
+.clear{
+	clear: both;
+}

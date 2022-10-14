@@ -1,0 +1,53 @@
+.container{
+    background-color: white;
+}
+
+.top{
+    height:280px;
+    display: flex;
+}
+
+.stars{
+    background-color: darkblue;
+    height:280px;
+    flex: 3;
+    display:inline-block;
+    vertical-align: top;
+    display:flex;
+    flex-direction: column;
+    padding:0px;
+}
+
+.starrows{
+    display: block;
+    height:29px;
+    color:white;
+    letter-spacing: 23px;
+    font-size:29px;
+    margin: 0px;
+    justify-content: flex-start;
+}
+
+.toprightstripes{
+    background-color:white;
+    height:280px;
+    flex: 5;
+    display:inline-block;
+}
+
+.bottomstripes{
+    background-color: white;
+}
+
+.red{
+    background-color: red;
+    height:40px;
+    margin-bottom: 40px;
+}
+
+.white{
+    background-color: white;
+    height:40px;
+    width:99%;
+}
+

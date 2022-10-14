@@ -1,0 +1,25 @@
+1. git init
+2. git remote add origin (url)
+3. git add *
+4. git commit -m "text"
+5. git push -u origin main (or master)
+
+or
+
+git push -u origin master --force
+
+create a new repository
+	git init
+
+check status
+	git status
+
+to add files to be tracked
+	git add *
+
+commit changes
+	git commit -m "message"
+
+upload to git
+	git remote add origin (url)
+	git push -u origin master

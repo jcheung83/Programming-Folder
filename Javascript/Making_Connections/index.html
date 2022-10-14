@@ -1,0 +1,112 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Making Connections</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <div class="top_nav">
+        <ul class="nav-links">
+          <li><h1>Profile</h1></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">My Profile</a></li>
+          <li><a href="#">Find Connections</a></li>
+        </ul>
+        <button class="btn" onclick="logOut(this)">Sign Out</button>
+      </div>
+      <div class="row">
+        <div class="main">
+          <div class="container1">
+            <div class="upper_card"></div>
+            <div class="lower_card">
+              <img class="icon" src="images/jane-m.jpg" id="user_img" alt="user picture" height="85">
+              <div class="flex">
+                <h1 class="margin" id="name">Jane Doe</h1>
+                <img src="icons/like.png" onclick="like(this)" id="thumbs" alt="like" height="25" class="like_button">
+              </div>
+              <div class="box">
+                <img src="icons/map-marker.png" class="image" alt="map marker" height="25"><p class="margin_top" id="h3">Seattle</p>
+              </div>
+              <p class="margin">Develop | Engineer | Problem Solver<br>
+              Master of the shadows and the Internet!</p>
+              <div class="box">
+                <img src="icons/gear.png" class="image" alt="gear" height ="20">
+                <a href="#" class="open-button" onclick="changeName(name)">edit profile</a>
+              </div>
+            </div>
+          </div>
+            <div class="container1">
+              <div class="header">Education</div>
+              <div class="lower_card">
+                <h3 class="margin">Coding Dojo - Full Stack Bootcamp</h3>
+                <p class="grey">Dec 2019-Mar 2020</p>
+                <p class="margin">Triple black belt in Python, MERN, and C#...</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="side_nav">
+            <div class="container2">
+              <div class="header" id="right">
+                <div><p class="circle" id="numberOfRequests">4</p>
+                </div>
+                <div><p></p>Connection Requests
+                </div>
+              </div>
+              <div class="lower_card" id="c_requests">    
+                <div class="userrow" id="erase1">  
+                  <div><img src="images/todd-s.jpg" class="margin_topright" id="user_img" height="30" alt="user image">  
+                  </div>  
+                  <div>Todd E</div>
+                  <div id="yesno"><img src="icons/accept-circle.png" onclick="accept(erase1)" height="25" class="all_around_margin" alt="accept"><img src="icons/close-circle.png" onclick="refuse(erase1)" height="25" class="all_around_margin" alt="refuse">
+                  </div>  
+                </div>
+                <div class="userrow" id="erase2">  
+                  <div><img src="images/phil-s.jpg" class="margin_topright" id="user_img" height="30" alt="user image">  
+                  </div> 
+                  <div>Phil K</div>
+                  <div id="yesno"><img src="icons/accept-circle.png" onclick="accept(erase2)" height="25" class="all_around_margin" alt="accept"><img src="icons/close-circle.png" onclick="refuse(erase2)" height="25" class="all_around_margin" alt="refuse">
+                  </div>  
+                </div>
+                <div class="userrow" id="erase3">  
+                  <div><img src="icons/user-circle.png" class="margin_topright" id="user_img" height="30" alt="user image">  
+                  </div> 
+                  <div>Jimmy E</div>
+                  <div id="yesno"><img src="icons/accept-circle.png" onclick="accept(erase3)" height="25" class="all_around_margin" alt="accept"><img src="icons/close-circle.png" onclick="refuse(erase3)" height="25" class="all_around_margin" alt="refuse">
+                  </div>  
+                </div>
+                <div class="userrow" id="erase4">  
+                  <div><img src="icons/user-circle.png" class="margin_topright" id="user_img" height="30" alt="user image">  
+                  </div> 
+                  <div>Yanni G</div>
+                  <div id="yesno"><img src="icons/accept-circle.png" onclick="accept(erase4)" height="25" class="all_around_margin" alt="accept"><img src="icons/close-circle.png" onclick="refuse(erase4)" height="25" class="all_around_margin" alt="refuse">
+                  </div>  
+                </div>
+              </div> 
+            </div> 
+            <div class="container2">
+              <div class="header" id="right"><p class="larger_circle" id="numberOfConnections">587</p>Your Connections</div>
+              <div class="lower_card" id="users">
+                <div class="userrow" id="no-space-between">
+                  <img src="images/adrien-s.jpg" class="margin_topright" id="user_img"height="30" alt="user picture">Adrien D
+                </div> 
+                <div class="userrow" id="no-space-between"> 
+                  <img src="images/anne-s.jpg" class="margin_topright" id="user_img" height="30" alt="user picture">Anne J
+                </div>
+                <div class="userrow" id="no-space-between">
+                  <img src="images/alayne-s.jpg" class="margin_topright" id="user_img" height="30" alt="user picture">Alayne T
+                </div>
+                <div class="userrow" id="no-space-between">
+                  <img src="images/arry-s.jpg" class="margin_topright" id="user_img" height="30" alt="user picture">Arry Y
+                </div>
+              </div>
+              <div class="view_more"><a href="#">View More</a>
+              </div>
+            </div>
+          </div>
+      </div>  
+    <script src="myScript.js"></script>
+    </body>
+    </html>

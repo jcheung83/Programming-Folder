@@ -1,0 +1,30 @@
+.row{
+    height: 100px;
+    background-color: white;
+    display: flex;
+    padding: 20px;
+}
+
+.col{
+    background-color: darkturquoise;
+    color: white;
+    flex: 1;
+    margin: 10px;
+    padding: 30px;
+}
+
+.col-2{
+    background-color: darkturquoise;
+    color: white;
+    flex: 2;
+    margin: 10px;
+    padding: 30px;
+}
+
+.col-3{
+    background-color: darkturquoise;
+    color: white;
+    flex: 3;
+    margin: 10px;
+    padding: 30px;
+}

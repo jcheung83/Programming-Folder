@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container1 {
+    margin: 10px -10px 20px -10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container2 {
+    margin: 10px -10px 20px -10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
+    
+.btn{
+    background-color: dodgerblue;
+    color: white;
+    height: 30px;
+    width: 80px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 6px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px black;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.right .btn {
+    background-color: forestgreen;
+    color: black;
+    height: 30px;
+    width: 120px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 6px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px black;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.nav{
+    background-color: lightgrey;
+    color: black;
+    margin: 0px 180px 0px 180px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 20px;
+}
+
+.search{
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    width: 400px;
+    height: 30px;
+    font-size: 15px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:40px;
+}
+
+h2{
+    font-size:25px;
+}
+
+h3{
+    margin: 10px 0px;
+}
+
+.main{
+    background-color: white;
+    min-height:600px;
+    display:flex;
+    margin: 10px 170px 10px 170px;
+}
+
+.left{
+    background-color: white;
+    flex: 3 3;
+    margin: 0px;
+    padding: 20px;   
+}
+
+.right{
+    background-color: white;
+    flex: 2 2;  
+    margin: 0px;
+    padding: 20px;
+}
+
+.ninja{
+    flex: 1;
+}
+
+.definition{
+    flex: 2;
+    text-align:left;
+    align-items: center;
+    display: flex;
+}
+
+.ninja .btn{
+    background-color: khaki;
+    color: black;
+    height: 30px;
+    width: 120px;
+    border: 3px solid black;
+    text-align: center;
+    padding: 6px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px black;
+    font-family:Arial, Helvetica, sans-serif;
+}

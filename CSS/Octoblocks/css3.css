@@ -1,0 +1,50 @@
+#dojo {
+    width: 640px;
+    height: 750px;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+#row1 {
+    width: 640px;
+    height: 200px;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0px 20px 0px;
+}
+
+#row2 {
+    width: 640px;
+    height: 200px;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0px 20px 0px;
+}
+
+#row3 {
+    width: 640px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0px 20px 0px;
+}
+
+#box {
+    width: 170px;
+    height: 170px;
+    background-color: white;
+    display: flex;
+    
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
