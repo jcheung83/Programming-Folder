@@ -1,0 +1,17 @@
+* {
+    border:0;
+    padding:0;
+}
+
+.container {
+    width: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+}

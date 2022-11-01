@@ -221,7 +221,7 @@ li{
 
 .open-button{
   margin-top: 8px;
-  
+  margin-right: 8px;
 }
 
 .form-popup {
@@ -242,4 +242,8 @@ li{
   padding-left: 20px;
   position: relative;
   top: 12px;
+}
+
+input{
+  margin-top: 8px;
 }

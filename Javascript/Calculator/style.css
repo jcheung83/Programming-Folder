@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#calculator {
+    background-color: black;
+    width: 295px;
+    height: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 15px;
+    font-family: arial;
+}
+
+#display {
+    height: 50px;
+    font-size: 40px;
+    text-align: right;
+    color: white;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    background-color: darkgrey;
+    color: black;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 25px;
+    font-style: bold;
+    color: white;
+}
+
+.operator {
+    background-color: orange;
+}
+
+#equals {
+    width: 280px;
+    background-color: white;
+    color: black;
+}

@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DojoWeather</title>
     <link rel="stylesheet" href="style.css">
-    <script src="myScript.js"></script>
 </head>
 <body>
     <nav class="header">
             <h1 class="margin_left">DojoWeather</h1>
             <ul class="margin_right">
-                <li>Burbank</li>
-                <li>Chicago</li>
-                <li>Dallas</li>
+                <li onclick="loading(this)">Burbank</li>
+                <li onclick="loading(this)">Chicago</li>
+                <li onclick="loading(this)">Dallas</li>
             </ul>
     </nav>
     <div class="main">
@@ -23,29 +22,62 @@
                 <h2>San Jose</h2>
             </div>
             <div class="show_temp">
-                <h3>show temperature in</h3><button>temp</button>
+                show temperature in
+                <select onchange="chooseType(this)">
+                    <option>°F</option>
+                    <option>°C</option>
+                </select>
             </div>
         </div>
         <div class="lower">
             <div class="weather">
                 <h2>Today</h2>
-                <img src="assets/some_rain.png" alt="some rain">
+                <img src="assets/some_rain.png" height="200" alt="some rain">
+                <h3>some rain</h3>
+                <div class="bottom">
+                    <h4 class="high_temp" id="temp">75°</h4>
+                    <h4 class="low_temp" id="temp">65°</h4>
+                </div>
             </div>
             <div class="weather">
                 <h2>Tomorrow</h2>
-                <img src="assets/some_sun.png" alt="some sun">
+                <img src="assets/some_sun.png" height="200" alt="some sun">
+                <h3>some sun</h3>
+                <div class="bottom">
+                    <h4 class="high_temp" id="temp">80°</h4>
+                    <h4 class="low_temp" id="temp">66°</h4>
+                </div>
             </div>
             <div class="weather">
                 <h2>Friday</h2>
-                <img src="assets/some_clouds.png" alt="some clouds">
+                <img src="assets/some_clouds.png" height="200" alt="some clouds">
+                <h3>some clouds</h3>
+                <div class="bottom">
+                    <h4 class="high_temp" id="temp">69°</h4>
+                    <h4 class="low_temp" id="temp">61°</h4>
+                </div>
             </div>
             <div class="weather">
                 <h2>Saturday</h2>
-                <img src="assets/some_sun.png" alt="some sun">
+                <img src="assets/some_sun.png" height="200" alt="some sun">
+                <h3>some sun</h3>
+                <div class="bottom">
+                    <h4 class="high_temp" id="temp">78°</h4>
+                    <h4 class="low_temp" id="temp">70°</h4>
+                </div>
             </div>
         </div>
+        <div class="message" id="closeMe">
+            <div class="margin_both"><img src="assets/cookie.png" class="center" alt="cookie"></div>
+            <div class="margin_both">
+            Stop! Cookie time
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffice. Read more...
+            </p>
+            </div>
+            <div class="margin_both"><button onclick="closeMessage(closeMe)">I accept</button></div>
+        </div>
+        <script src="myScript.js"></script>
     </div>
-
-    <script src="myScript.js"></script>
+    
 </body>
 </html>

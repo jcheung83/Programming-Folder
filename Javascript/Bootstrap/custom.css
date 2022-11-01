@@ -1,0 +1,9 @@
+.nav-link{
+    margin: 0 20px;
+}
+
+.carousel-inner{
+    margin: 0 auto;
+    width: 75%;
+    border-radius: 100px;
+}

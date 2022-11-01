@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+        }
+        .text{
+            text-align:center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            display: block;
+        }
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: skyblue;
+            border: 2px solid black;
+            display: inline-block; 
+            border-radius: 25px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<h1 class="text">Welcome!</h1>
+    
+{% for x in range(0,times): %}
+    <div class="box" style="background-color: {{ phrase }}"></div>
+{% endfor %}
+
+<!-- <h3>My Flask Template</h3>
+<p>Phrase: {{ phrase }}</p>
+<p>Times: {{ times }}</p>
+      
+{% for x in range(0,times): %}
+    <p>{{ phrase }}</p>
+{% endfor %}
+      
+{% if phrase == "hello" %}
+  <p>The phrase says hello</p>
+{% endif %} -->
+</body>
+</html>

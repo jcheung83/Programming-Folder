@@ -43,43 +43,6 @@ function like(element){
 }
 
 function changeName(element){
-    var name = document.querySelector("#name");
-    var random = Math.floor(Math.random() * 11);
-    console.log(random);
-    if (random==0){
-        name.innerText = "Bobby Dee";
-    }
-    else if (random==1){
-        name.innerText = "Lame Duck";
-    }
-    else if (random==2){
-        name.innerText = "Poppy Seed";
-    }
-    else if (random==3){
-        name.innerText = "Random Name";
-    }
-    else if (random==4){
-        name.innerText = "People Person";
-    }
-    else if (random==5){
-        name.innerText = "Henry Winkler";
-    }
-    else if (random==6){
-        name.innerText = "Joe Biden";
-    }
-    else if (random==7){
-        name.innerText = "Stan the Man";
-    }
-    else if (random==8){
-        name.innerText = "Smash Mouth";
-    }
-    else if (random==9){
-        name.innerText = "Clayton Crain";
-    }
-    else if (random==10){
-        name.innerText = "John Doer";
-    }
-    else {
-        name.innerText = "Fail";
-    }
+    var x = document.getElementById("new_name").value;
+    document.getElementById("name").innerHTML = x;
 }

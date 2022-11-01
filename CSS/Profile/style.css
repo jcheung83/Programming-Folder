@@ -9,10 +9,7 @@
   justify-content: flex-start;
 }
 
-#yesno{
-  justify-content: flex-end;
-}
-
+/*top nav bar*/
 .top_nav{
   height: 80px;
   background-color: black;
@@ -30,6 +27,7 @@
   margin-top: 30px;
 }
 
+/*side navigation for user connections*/
 .side_nav{
   background-color: white;
   color: black;
@@ -42,6 +40,7 @@
   margin-left: 20px;
 }
 
+/*main page with user info*/
 .main{
   background-color: white;
   color: black;
@@ -52,6 +51,7 @@
   margin-left: 100px;
 }
 
+/*header for each box*/
 .header{
   background-color: black;
   color: white;
@@ -61,6 +61,7 @@
   padding-left: 20px;
 }
 
+/*divs within main page*/
 .container1{
   box-shadow: 4px 4px 4px black;
   border: 1px solid grey;
@@ -70,6 +71,7 @@
   flex-direction: column;
 }
 
+/*divs within side nav*/
 .container2{
   box-shadow: 4px 4px 4px black;
   border: 1px solid grey;
@@ -79,10 +81,12 @@
   flex-direction: column;
 }
 
+/*container for everything but top nav*/
 .row{
   display: flex;
 }
 
+/*upper card of profile*/
 .upper_card{
   background-color: #00A5BF;
   color: #00A5BF;
@@ -135,6 +139,7 @@ ul{
   list-style-type: none;
 }
 
+/*navigation links at top*/
 .nav-links{
   width: 50%;
   color: white;
@@ -203,6 +208,7 @@ li{
   padding: 10px 0px 10px 25px;
 }
 
+/*each row of users*/
 .userrow{
   width: 270px;
   background-color: white;
@@ -217,5 +223,10 @@ li{
 
 #no-space-between{
   justify-content: flex-start;
+}
+
+/*accept or refuse boxes*/
+#yesno{
+  justify-content: flex-end;
 }
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% for x in range(1,x_times+1): %}
+            <div class="row">
+            {% for y in range(1,y_times+1): %}
+                {% if x%2 == 1 and y%2 == 1: %}
+                    <div class="red_box" style="background-color: {{ c1 }} "></div>
+                {% elif x%2 == 1 and y%2 == 0: %}
+                    <div class="black_box" style="background-color: {{ c2 }} "></div>
+                {% elif x%2 == 0 and y%2 == 0: %}
+                    <div class="red_box" style="background-color: {{ c1 }} "></div>
+                {% elif x%2 == 0 and y%2 == 1: %}
+                    <div class="black_box" style="background-color: {{ c2 }} "></div>
+                {% endif %}
+            {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+    </body>
+</html>

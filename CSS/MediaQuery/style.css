@@ -1,0 +1,27 @@
+.col {
+    /* set the universal stylings for all columns, regardless of screen size */
+    display: inline-block;
+    vertical-align: top;
+    min-height: 250px;
+}
+
+@media only screen and (max-width: 480px) {
+    .sm-4 {
+        width: 100%;
+        background-color: blue;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .med-2 {
+        width: 49%;    
+        background-color: yellow;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .lg-1 {
+        width: 24%;
+        background-color: red;
+    }
+}
