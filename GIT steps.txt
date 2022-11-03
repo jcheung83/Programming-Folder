@@ -1,3 +1,5 @@
+python -m pipenv
+
 mysqld --initialize --console
 //should create data folder
 mysqld --console

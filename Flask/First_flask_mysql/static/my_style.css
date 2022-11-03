@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+.form-control{
+    width: 500px;
+}
+
+.box{
+    box-shadow: 1px 1px 1px black;
+}
+
+.container{
+    margin-left: 10px;
+    display: flex;
+}
+
+.border{
+    border: 5px solid black;
+}
+
+.margin-top{
+    margin-top: 10px;
+}
+
+#margin-left{
+    margin-left: 10px;
+}
