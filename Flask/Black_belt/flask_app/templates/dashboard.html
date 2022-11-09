@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    <title>TV Shows</title>
+</head>
+<body>
+    
+    {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+        {% if messages %}                            <!-- check if there are any messages -->
+            <div class="red">
+            {% for message in messages %}            <!-- loop through the messages -->
+                <h1>{{message}}</h1>                   <!-- display each message in a paragraph tag -->
+            {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    
+    <div class="container">
+        <div class="container_spacebetween">
+            <h1>Howdy {{first_name}}!</h1>
+            <div>
+                <a href='/shows/new'>+ Create</a>
+                <a href='/logout'>Logout</a>
+            </div>
+        </div>    
+
+        <h2>All TV Shows:</h2>
+
+        <div class="show_table">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Network</th>
+                        <th scope="col">Release Date</th>
+                        <th scope="col">Actions</th>
+                        <th scope="col" class="purple">Like!</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for one_show in shows %}
+                        <tr>
+                            <td>{{one_show.title}}</td>
+                            <td>{{one_show.network}}</td>
+                            <td>{{one_show.date}}</td>
+                            <td>{% if one_show.user_id == id %}
+                                    <a href='/shows/{{ one_show.id }}'>show</a> | <a href='/shows/edit/{{one_show.id}}'>edit</a> | <a href='/delete/shows/{{one_show.id}}'>delete</a>
+                                {% else %}
+                                    <a href='/shows/{{ one_show.id }}'>show</a>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if one_show.user_id != id %}
+                                    {% if dict[one_show.id] == 1 %}
+                                        <a href="/unlike/{{id}}/{{one_show.id}}" class="purple">unlike</a>  
+                                    {% else %}    
+                                        <a href="/like/{{id}}/{{one_show.id}}" class="purple">like</a> 
+                                    {% endif %}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>  
+    </div>
+</body>
+</html>
