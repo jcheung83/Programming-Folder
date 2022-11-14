@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="green"><h1>The email address you entered ( {{user_email[0].name}} ) is a VALID email address! Thank you!</h1></div>
+    
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Email</th>
+                    <th scope="col">Time Created</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for one_email in emails %}
+                        <tr>
+                            <td>{{one_email.name}}</td>
+                            <td>{{one_email.created_at}}</td>
+                            <td><a href='/delete/{{one_email.id}}'>Delete</a></td>
+                        </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <a href='/'>Home</a>
+    </div>
+</body>
+</html>

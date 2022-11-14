@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    <title>Users</title>
+</head>
+<body>
+    <h1 class="text-center">All Users</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Created At</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for one_user in all_users %}
+                {% if one_user.id % 2 == 1 %}
+                    <tr class="table-secondary">
+                {% else %}
+                    <tr class="table-primary">
+                {% endif %}
+                        <td>{{one_user.id}}</td>
+                        <td>{{one_user.first_name}}</td>
+                        <td>{{one_user.last_name}}</td>
+                        <td>{{one_user.email}}</td>
+                        <td>{{one_user.created_at}}</td> 
+                        <td><a href='/users/{{one_user.id}}/'>Show</a> | <a href='/users/{{one_user.id}}/edit'>Edit</a> | <a href='/users/{{one_user.id}}/destroy'>Delete</a></td>   
+                </tr>
+            {% endfor %}
+            {% print(x) %}
+        </tbody>
+    </table>
+
+    <a href='/new'><button type="submit" value="Update" class="box" id="margin-left">Add a user</button></a>
+</body>
+</html>

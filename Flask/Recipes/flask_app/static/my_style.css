@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    margin: 30px;
+}
+
+.container_spacebetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_noflex{
+    display: block;
+    margin: 30px;
+}
+
+.container_flex{
+    display: flex;
+}
+
+.box{
+    margin: 30px;
+    min-height: 500px;
+    width: 25%;
+    padding: 20px;
+}
+
+.recipe_box{
+    min-height: 500px;
+    width: 80%;
+    padding: 20px;
+}
+
+.recipe_table{
+    margin: 30px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.red{
+    background-color: red;
+    color: white;
+}
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form_block{
+    display: block;
+    margin-right: 50px;
+    width: 50%;
+}
+
+.input{
+    margin: 10px;
+}
+
+.purple{
+    color: rebeccapurple;
+}
+
+.spacing{
+    margin: 20px;
+}

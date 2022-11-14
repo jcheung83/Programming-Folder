@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+        {% if messages %}                            <!-- check if there are any messages -->
+            <div class="red">
+            {% for message in messages %}            <!-- loop through the messages -->
+                <h1>{{message}}</h1>                   <!-- display each message in a paragraph tag -->
+            {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    
+    <div class="container">
+        <div class="container_spacebetween">
+            <h1>Welcome, {{first_name}}</h1>
+            <div>
+                <a href='/recipes/new'>+ Create</a>
+                <a href='/logout'>Logout</a>
+            </div>
+        </div>    
+        <span>All posted recipes:</span>
+        <div class="recipe_table">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Under 30 min</th>
+                        <th scope="col">Posted by</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for one_recipe in recipes %}
+                            <tr>
+                                <td>{{one_recipe.name}}</td>
+                                <td>{% if one_recipe.under30 == 0 %}
+                                        No
+                                    {% elif one_recipe.under30 == 1 %}
+                                        Yes
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {{one_recipe.first_name}}
+                                </td>
+                                <td>{% if one_recipe.user_id == id %}
+                                        <a href='/recipes/{{ one_recipe.id }}'>view recipe</a> | <a href='/recipes/edit/{{one_recipe.id}}'>edit recipe</a> | <a href='/delete/recipes/{{one_recipe.id}}'>delete recipe</a>
+                                    {% else %}
+                                        <a href='/recipes/{{ one_recipe.id }}'>view recipe</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>  
+    </div>
+    
+</body>
+</html>

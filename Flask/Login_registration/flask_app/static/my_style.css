@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    display: flex;
+}
+
+.box{
+    margin: 30px;
+    background-color: slategrey;
+    color: white;
+    min-height: 500px;
+    width: 25%;
+    padding: 20px;
+}
+
+.red{
+    background-color: red;
+    color: white;
+}
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    margin: 10px;
+}

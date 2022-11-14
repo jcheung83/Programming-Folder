@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container_spacebetween">
+            <h1>Welcome, {{first_name}}</h1>
+            <div>
+                <a href='/recipes'>Back to recipes</a>
+                <a href='/logout'>Logout</a>
+            </div>
+        </div>    
+        <div class="container_spacebetween">
+            <h1>{{recipe.name}}</h1>
+            <span>Posted by: {{name.first_name}}</span>
+        </div>
+        <div class="recipe_table">
+            <table>
+                <tr class="spacing">
+                    <td>Description:</td>
+                    <td>{{recipe.description}}</td>
+                </tr>
+                <tr class="spacing">
+                    <td>Under 30 Minutes?</td>
+                    <td>{% if recipe.under30 == 0 %}
+                            No
+                        {% elif recipe.under30 == 1 %}
+                            Yes
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr class="spacing">
+                    <td>Instructions:</td>
+                    <td>{{recipe.instructions}}</td>
+                </tr>
+                <tr class="spacing">
+                    <td>Date Made:</td>
+                    <td>{{recipe.date}}</td>
+                </tr>
+
+            </table>
+
+</body>
+</html>
