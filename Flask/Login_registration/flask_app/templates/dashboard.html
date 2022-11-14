@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Name: {{current_user[0].first_name}} {{current_user[0].last_name}}</h1>
+    <h1>Email: {{current_user[0].email}}</h1>
+    <h2>Birthday: {{current_user[0].birthday}}</h2>
+    <h2>Created at: {{current_user[0].created_at}}</h2>
+    <h3>ID: {{current_user[0].id}}</h3>
+
+    <a href='/logout'>Logout</a>
+</body>
+</html>

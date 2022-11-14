@@ -1,0 +1,1 @@
+Trying to get this work with User as a subclass of Recipe

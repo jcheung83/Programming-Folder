@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+        {% if messages %}                            <!-- check if there are any messages -->
+            {% for message in messages %}            <!-- loop through the messages -->
+                <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form action="/create/burger" method="post">
+        ...
+            <select name="restaurant_id">
+            <!-- Need to create an option list for the user to select a restaurant. -->
+            <!-- Note that we are passing the restaurant id into the value -->
+            {% for restaurant in all_restaurants %}
+            <option value={{restaurant.id}}>{{restaurant.name}}</option>
+            {% endfor %}
+            </select>
+        </form>
+</body>
+</html>

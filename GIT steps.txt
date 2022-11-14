@@ -1,10 +1,9 @@
-python -m pipenv
+python -m pip install pipenv 
+python -m pipenv install flask 
+python -m pipenv install pymysql
+python -m pipenv shell
+python -m pipenv install flask-bcrypt
 
-mysqld --initialize --console
-//should create data folder
-mysqld --console
-mysql -u root --skip-password
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
 
 1. git init
 2. git remote add origin (url)
